@@ -22,4 +22,4 @@ COPY . .
 RUN ls -lh
 
 # Set the entrypoint
-ENTRYPOINT ["./wait-for-couchbase.sh", "python", "travel.py"]
+CMD ["python", "travel.py"]
