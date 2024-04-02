@@ -17,6 +17,8 @@ RUN pip install -r requirements.txt
 # Expose ports
 EXPOSE 8080
 
+RUN ls -lh
+
 COPY . .
 
 # Set the entrypoint
