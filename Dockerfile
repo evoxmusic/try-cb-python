@@ -19,7 +19,9 @@ EXPOSE 8080
 
 COPY . .
 
-RUN ls -lh
+ARG CB_HOST
+ARG CB_USER
+ARG CB_PSWD
 
 # Set the entrypoint
-CMD ["python", "travel.py"]
+CMD ["python", "travel.py", "-c", "$CB_HOST", "-u", "$CB_USER", "-p", "$CB_PSWD"]
