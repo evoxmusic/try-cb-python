@@ -17,5 +17,7 @@ RUN pip install -r requirements.txt
 # Expose ports
 EXPOSE 8080
 
+COPY . .
+
 # Set the entrypoint
 ENTRYPOINT ["./wait-for-couchbase.sh", "python", "travel.py"]
